@@ -28,7 +28,18 @@
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script>
       $(document).ready(function(){
-        // Write your code here
+   
+        $('.btn.fadeIn').on('click',function() {
+          $('.box').fadeIn();
+        });
+
+        $('.btn.fadeOut').on('click'function() {
+          $('.box').fadeOut();
+        });
+
+        $('.btn.fadeInOut').on('click'function() {
+          $('.box').fadeToggle();
+        });
       });
     </script>
   </body>

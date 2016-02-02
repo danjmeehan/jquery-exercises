@@ -5,7 +5,6 @@
     <style>
       .box{
         padding:25px;
-        background-color:red;
         color:white;
         border-radius:6px;
         width:100px;
@@ -14,19 +13,32 @@
         margin:10px;
         float:left;
       }
+      .red{
+        background-color: red;
+      }
+      .green{
+        background-color: green;
+      }
     </style>
   </head>
   <body>
 
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
+    <div class="box red"></div>
+    <div class="box red"></div>
+    <div class="box red"></div>
+    <div class="box green"></div>
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script>
       $(document).ready(function(){
-        // Write your code here
+        $('.box').on('mouseenter', function(){
+          var mousedBox = $(this);
+          if(mousedBox.hasClass('red')){
+            mousedBox.removeClass('red').mousedBox.addClass('green');
+          } else {
+            mousedBox.removeClass('green').mousedBox.addClass('red');
+          }
+        });
       });
     </script>
   </body>

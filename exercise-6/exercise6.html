@@ -62,7 +62,14 @@
         }
       ];
 
-      // Write your code here!
+      $(document).ready(function(){
+        for(i=0; i < items.length; i++) {
+          var newItem = $('<div/>').addClass('item');
+          var label = $('<label/>').text(items[i].name);
+          var price = $('<div/>').addClass('price').text(items[i].price);
+          $('.items').append(label,price);
+        };
+      })
 
     </script>
   </body>
