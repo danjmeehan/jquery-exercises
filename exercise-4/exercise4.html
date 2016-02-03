@@ -26,7 +26,7 @@
     <div class="box red"></div>
     <div class="box red"></div>
     <div class="box red"></div>
-    <div class="box green"></div>
+    <div class="box red"></div>
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script>
@@ -34,9 +34,9 @@
         $('.box').on('mouseenter', function(){
           var mousedBox = $(this);
           if(mousedBox.hasClass('red')){
-            mousedBox.removeClass('red').mousedBox.addClass('green');
+            mousedBox.removeClass('red').addClass('green');
           } else {
-            mousedBox.removeClass('green').mousedBox.addClass('red');
+            mousedBox.removeClass('green').addClass('red');
           }
         });
       });
